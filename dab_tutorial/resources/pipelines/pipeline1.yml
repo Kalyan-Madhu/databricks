@@ -1,14 +1,14 @@
-id: 5997d116-7b92-4976-8216-3971d26aeee5
-pipeline_type: WORKSPACE
-name: pipeline_1
-libraries:
-  - glob:
-      include: ../../src/pipeline_1/transformations/**
-schema: default
-continuous: false
-development: false
-photon: true
-channel: CURRENT
-catalog: databrickskalyan
-serverless: true
-root_path: ../../src/pipeline_1
+resources:
+  pipelines:
+    pipeline_1:
+      name: pipeline_1
+      target: ${var.schema}
+      libraries:
+        - file:
+            path: ../../src/pipeline_1/transformations/demo.py
+      catalog: ${var.catalog}
+      serverless: true
+      photon: true
+      channel: CURRENT
+      continuous: false
+      development: true

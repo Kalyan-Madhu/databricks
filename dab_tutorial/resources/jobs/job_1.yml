@@ -1,7 +1,7 @@
 resources:
   jobs:
-    Job_1:
-      name: Job_1
+    job_1:
+      name: job_1
       tasks:
         - task_key: ingestion
           notebook_task:
@@ -9,4 +9,3 @@ resources:
             source: WORKSPACE
       queue:
         enabled: true
-      performance_target: PERFORMANCE_OPTIMIZED

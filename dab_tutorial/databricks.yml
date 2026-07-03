@@ -5,7 +5,7 @@ bundle:
   uuid: 7555a471-83f0-4d1a-8ef9-4f3f97a67446
 
 include:
-  - resources/*.yml
+  - resources/**/*.yml
 
 variables:
   catalog:
@@ -23,6 +23,7 @@ targets:
     default: true
     workspace:
       host: dbc-5b0e5a2f-35e6.cloud.databricks.com
+      root_path: /Workspace/DEV/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
     variables:
       catalog: workspace
       schema: ${workspace.current_user.short_name}
