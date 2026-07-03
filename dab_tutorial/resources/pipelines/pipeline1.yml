@@ -1,0 +1,14 @@
+resources:
+  pipelines:
+    pipeline_1:
+      name: pipeline_1
+      target: ${var.schema}
+      libraries:
+        - file:
+            path: ../../src/pipeline_1/transformations/demo.py
+      catalog: ${var.catalog}
+      serverless: true
+      photon: true
+      channel: CURRENT
+      continuous: false
+      development: true
